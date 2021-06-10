@@ -1,0 +1,132 @@
+@keyframes bgcolor {
+    0% {
+        background-color: #000000
+    }
+
+    30% {
+        background-color: #000000
+    }
+
+    60% {
+        background-color: #000000
+    }
+
+    90% {
+        background-color: #000000
+    }
+
+    100% {
+        background-color: #000000
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+#title{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+#name{
+    width: 50%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+}
+#pin{
+    width: 50%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+}
+#label{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+#AcceptButton{
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #17a317;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#EventPinText{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+
+}
+.bgSizeCover {
+    background-image: url(/images/Backgroud.jpg);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #title{
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+}
+
+#categoria{
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    margin-left: 20%; 
+}
+#participante{
+    font-size: 8vw;
+    text-align: center;
+    color: white;
+    margin-left: 20%; 
+}
+#equipo{
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    margin-left: 20%; 
+}
+#puntaje{
+    font-size: 8vw;
+    text-align: center;
+    color: white;
+    margin-left: 20%; 
+}
+
