@@ -63,7 +63,7 @@ socket.on('PuntajeIngresado', function(nombre_aparato,nombre_categoria,nombre_eq
         setTimeout(function(){
         showing_score=false;
         document.getElementById('display').style.display = 'none';
-         },20000);
+         },35000);
     }
     
 });

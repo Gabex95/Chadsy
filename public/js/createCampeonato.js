@@ -34,9 +34,10 @@ function InicializarCampeonato(){
 }
 
 socket.on('campeonatoNamesData', function(campeonato){
-
+    var table=document.getElementById("table_campeonato").getElementsByTagName('tbody')[0];
+    table.innerHTML="";
       for(var i = 0; i < campeonato.length; i++){  
-          var table=document.getElementById("table_campeonato").getElementsByTagName('tbody')[0];
+         
           var newRow=table.insertRow(table.length);
           cell1=newRow.insertCell(0);
           cell1.innerHTML=campeonato[i].name;
