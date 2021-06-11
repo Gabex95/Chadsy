@@ -65,8 +65,8 @@ socket.on('campeonatoNamesData', function(campeonato){
 
       }).then((willDelete) => {
             if (willDelete) {
-               var  selectedRow=td.parentElement.parentElement;
-                 document.getElementById("table_participante").deleteRow(selectedRow.rowIndex)
+              // var  selectedRow=td.parentElement.parentElement;
+               //  document.getElementById("table_participante").deleteRow(selectedRow.rowIndex)
                 socket.emit('deleteCampeonato',id_campeonato)
             }            
       });
