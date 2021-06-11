@@ -89,14 +89,14 @@ socket.emit('requestDataParticipantes',id_campeonato);
 
 
 }
-socket.on('ReceiveEventos',async function(list_eventos){
+socket.on('ReceiveEventos', function(list_eventos){
     loadcount++;
     
     lista_eventos=list_eventos;
     if(loadcount==4)
     $('#todos-tab').trigger('click')
 });
-socket.on('ReceiveCategorias',async function(list_categorias){ 
+socket.on('ReceiveCategorias', function(list_categorias){ 
     loadcount++;
     lista_categorias=list_categorias;
     //LLenar dropdown categorias
@@ -108,21 +108,21 @@ socket.on('ReceiveCategorias',async function(list_categorias){
     $('#todos-tab').trigger('click')
 });
 
-socket.on('ReceiveEquipos',  async function(list_equipos){
+socket.on('ReceiveEquipos',   function(list_equipos){
     loadcount++;
     lista_equipos=list_equipos
     
     if(loadcount==4)
     $('#todos-tab').trigger('click')
 });
-socket.on('ReceiveDataParticipantes', async function(list_participantes){
+socket.on('ReceiveDataParticipantes',  function(list_participantes){
     loadcount++;  
     lista_participantes=list_participantes  
     if(loadcount==4)
     $('#todos-tab').trigger('click')
 });
 
-socket.on('ReceivePuntajesParticipante', async function(puntajes,id){     
+socket.on('ReceivePuntajesParticipante',  function(puntajes,id){     
     var index=lista_participantes.findIndex((participante) => participante.id_participante == id);
     lista_participantes[index].puntajes=puntajes;
     lista_participantes[index].total=0;
