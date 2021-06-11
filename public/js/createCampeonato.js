@@ -78,5 +78,5 @@ socket.on('campeonatoNamesData', function(campeonato){
             text: "Archivo Eliminado",
             icon: "success",
           })
-          
+        socket.emit('requestCampeonatosNames',admin_id);
     });
