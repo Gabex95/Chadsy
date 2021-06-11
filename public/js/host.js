@@ -6,7 +6,7 @@ var pin_campeonato=0;
     var cockie_Array= document.cookie.split(";");
     var params = jQuery.deparam(window.location.search);
     }
-    var admin_Array= cockie_Array[1].split("=");
+    var admin_Array= cockie_Array[0].split("=");
     var admin_id=admin_Array[1];
     console.log("ID ADMIN="+ admin_id);//TEST
 
