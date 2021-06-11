@@ -6,7 +6,7 @@ const socketIO = require('socket.io');
 
 
 //Import classes
-const Campeonato = require('./classes/campeonato');
+const {Campeonato} = require('./classes/campeonato');
 var liveCampeonatos =new Campeonato();//Campeonatos en curso
 const publicPath = path.join(__dirname, '../public');
 var app = express();
@@ -16,7 +16,7 @@ var io = socketIO(server);
 var connectCounter=0;
 
 
-const  Pool  = require('pg');
+const  {Pool}  = require('pg');
 
 app.use(express.static(publicPath));
 
@@ -766,8 +766,10 @@ io.on('connection', (socket) => {
 
 
 ///CAMBIAR POR SERVIDOR
-server.listen(3000, 
-    console.log("Server started on port 3000")
+app.set('port',process.env.PORT||3000)
+ 
+server.listen(app.get('port'), 
+    console.log("Server started on port "+app.get('port'))
 );
 
 
