@@ -80,6 +80,26 @@ io.on('connection', (socket) => {
         
     });
 
+    //Eliminar Campeonato
+    socket.on('deleteCampeonato', function(id_campeonato){
+        let query=("DELETE FROM campeonato WHERE id_campeonato="+id_campeonato+" ;");
+        pool.connect()
+        .then((client) => {
+            client.query(query)
+                .then( 
+                        socket.emit('CampeonatoEliminado')
+                )
+                .catch(err => {
+                    console.error(err);
+                });
+                client.release(); 
+        })
+        .catch(err => {
+            console.error('error: ' + err.message);
+        });  
+    
+    });
+
     //Devolver los campeonatos correscondientes al admin
     socket.on('requestCampeonatosNames', function(admin_id){
         var Campeonatos =new Campeonato();

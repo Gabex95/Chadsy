@@ -46,14 +46,14 @@ socket.on('campeonatoNamesData', function(campeonato){
           cell3=newRow.insertCell(2);
           var button = document.createElement('button');
           button.innerHTML = campeonato[i].name;
-          button.setAttribute('onClick', "EliminarCampeonato('" + campeonato[i].id + "')");
+          button.setAttribute('onClick', "EliminarCampeonato(this,'" + campeonato[i].id + "')");
           button.setAttribute('class', 'CampButton');
           button.innerHTML = "Eliminar";
           cell3.appendChild(button)
       }
   });
 
-  function EliminarCampeonato(id_campeonato){
+  function EliminarCampeonato(td,id_campeonato){
     swal("Esta seguro de eliminar el campeonato, se borraran todos los datos?", {
         dangerMode: true,
         
@@ -64,7 +64,18 @@ socket.on('campeonatoNamesData', function(campeonato){
 
       }).then((willDelete) => {
             if (willDelete) {
-                swal("Archivo Eliminado")
+               var  selectedRow=td.parentElement.parentElement;
+                 document.getElementById("table_participante").deleteRow(selectedRow.rowIndex)
+                socket.emit('deleteCampeonato',id_campeonato)
             }            
       });
     }
+
+    socket.on('CampeonatoEliminado',  function(){ 
+        swal({
+            title: "Aviso",
+            text: "Archivo Eliminado",
+            icon: "success",
+          })
+          
+    });
