@@ -31,6 +31,7 @@ function ElegirCampeonato(id_campeonato) {
     var del_element = document.getElementById("list_campeonatos");
         del_element.remove();
         document.getElementById("events").style.display = "block";
+        
         document.getElementById("start").style.display = "block";
         socket.emit('InicializarCampeonato',id_campeonato);
        
@@ -77,6 +78,7 @@ function endEvent(){
 
 //When server starts the game
 socket.on('Start', function(id){
+    document.getElementById("cancel").style.display = "block";
     document.getElementById('Message').innerHTML = "Campeonato en curso, mantener esta pagina abierta";
     document.getElementById('start').style.display = 'none';
     console.log('Campeonato Comenzado');
