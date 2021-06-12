@@ -742,7 +742,7 @@ io.on('connection', (socket) => {
                         .catch(err => console.error('Error executing query', err.stack))
                     client.release(); 
                 });
-                    socket.emit('End');
+                    socket.to(String(pin_campeonato).emit('End'));
             }
             else if(cur_champ==null){
                 socket.emit('noChampFound'); //Player is sent back because game was not found with pin
@@ -777,7 +777,6 @@ io.on('connection', (socket) => {
             socket.emit('noChampFound'); //Player is sent back because game was not found with pin
         }
     });
-
 
    
 });//Fin de Las funciones de Socket

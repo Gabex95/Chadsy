@@ -53,7 +53,7 @@ socket.on('campeonatoNamesData', function(campeonato){
           cell3=newRow.insertCell(2);
           var button = document.createElement('button');
           button.innerHTML = campeonato[i].name;
-          button.setAttribute('onClick', "ElegirCampeonato('" + campeonato[i].id + "','"+campeonato[i].name+"','"+campeonato[i].finalizado+"')");
+          button.setAttribute('onClick', "ElegirCampeonato('" + campeonato[i].id + "','"+campeonato[i].name+"','"+campeonato[i].Finalizado+"')");
           button.setAttribute('class', 'CampButton');
           button.innerHTML = "CARGAR";
           cell3.appendChild(button)

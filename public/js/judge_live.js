@@ -227,6 +227,12 @@ function InicializarPuntaje(){
     document.getElementById('list').innerHTML ="";
     document.getElementById('title').innerHTML =("<h1>Ingrese Puntaje:</h1><br> <h3>"+(nombre_participante)+" </h3>");
     document.getElementById('puntaje').value =""; 
+    document.getElementById("puntaje").addEventListener("keyup", function(event) {
+    event.preventDefault();
+        if (event.key === 'Enter' ) {
+            document.getElementById("input_button").click();
+        }
+    });
 }
 
 function ScoreInput(){

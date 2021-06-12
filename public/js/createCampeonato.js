@@ -22,7 +22,7 @@ socket.on('CargarCampeonato', function(id_campeonato){
         text:"Campeonato Cargado!, procida a modificar",
         icon:"success"
         });
-        window.location.replace("admin/modify/")
+       // window.location.replace("./admin/modify/")
     });
 
 window.onload = function() {
